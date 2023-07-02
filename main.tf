@@ -9,6 +9,7 @@ resource "aws_s3_bucket" "my-new-bucket" {
     UpdatedAt   = "2023/07/02"
   }
 }
+
 #atribuindo as propriedades do bucket para profiles da conta do proprietario
 resource "aws_s3_bucket_ownership_controls" "my-bucket-ownership-controls" {
   bucket = aws_s3_bucket.my-new-bucket.id
@@ -16,6 +17,7 @@ resource "aws_s3_bucket_ownership_controls" "my-bucket-ownership-controls" {
     object_ownership = "BucketOwnerPreferred"
   }
 }
+
 #definindo controle do bucket apenas para profiles da conta do proprietário
 resource "aws_s3_bucket_acl" "my-bucket-acl" {
   depends_on = [aws_s3_bucket_ownership_controls.my-bucket-ownership-controls]
