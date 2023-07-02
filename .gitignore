@@ -1,6 +1,6 @@
 *.dll
 *.exe
-.gitignore
+tfplan.out
 .DS_Store
 example.tf
 terraform.tfplan
