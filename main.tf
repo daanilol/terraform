@@ -1,11 +1,11 @@
 resource "aws_s3_bucket" "my-new-bucket" {
-  bucket = "my-tf-new-bucket"
+  bucket = "my-tf-new-bucket-01"
 
   tags = {
-    Name = "My first Terraform"
+    Name        = "My first Terraform with AWS"
     Envirioment = "Dev"
-    ManegedBy = "Danilo Lisboa"
-    UpdatedAt = "2023/07/02"
+    ManegedBy   = "Danilo L"
+    UpdatedAt   = "2023/07/02"
   }
 }
 
